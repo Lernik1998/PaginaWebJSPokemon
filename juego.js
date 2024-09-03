@@ -27,18 +27,18 @@ function iniciar() {
 }
 
 function detener() {
-    window.location.assign("IndexWeb.html");
+    window.location.assign("index.html");
 }
 
 
 
 function acierto() {
     alert("Acertaste!!!");
-    window.location.assign("IndexWeb.html");
+    window.location.assign("index.html");
 }
 
 
 function error() {
     alert("Has perdido!!!");
-    window.location.assign("IndexWeb.html");
+    window.location.assign("index.html");
 }

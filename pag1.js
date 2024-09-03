@@ -8,7 +8,7 @@ btAtras.style.paddingLeft = 50;
 
 function anterior() {
    //window.history.back();
-   window.location.assign("IndexWeb.html");
+   window.location.assign("index.html");
 }
 
 function salirPag() {
