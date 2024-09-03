@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="EstilosGenerales.css">
+    <link rel="stylesheet" type="text/css" href="IndexCSS.css">
+
+    <link rel="shortcut icon" href="Imagenes/icono.ico" type="image/x-icon">
+    <meta name="author" content="Lernik Gasparyan">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon</title>
+</head>
+
+<body id="cuerpo" onresize="juegoAleatorio()">
+
+<div id="juego">
+    <h1 id="titulo" onmouseup="probandoMouseup()">Torneo mundial Pokemon Ultimate</h1>
+    <ul class="menu">
+        <li><a href="IndexWeb.html">Página principal</a></li>
+        <li><a href="Pagina1.html">Generaciones 1 y 2 </a></li>
+        <li><a href="Pagina2.html">Generaciones 3 y 4 </a></li>
+        <li><a href="Pagina3.html">Generaciones 5 y 6 </a></li>
+        <li><a href="Pagina4.html">Generaciones 7 y 8 </a></li>
+        <li><a href="Pagina5.html">Generación 9</a></li>
+    </ul>
+    <h2 onclick="juegoAleatorio()">Premio del torneo</h2>
+    <table class="premio" border="1">
+        <tr>
+            <td>Primer puesto</td>
+            <td>Segundo puesto</td>
+            <td>Tercer puesto</td>
+        </tr>
+        <tr>
+            <td id="elem1" onmouseover="probandoOnFocus()">5.000€</td>
+            <td>2.500€</td>
+            <td>1.000€</td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <div class="controdar">
+
+    </div>
+    <p>
+        En el inmenso mundo de Pokémon, hay cientos de Pokémon que podemos atrapar, sin embargo,
+        son los Pokémon iniciales los que guardamos en un lugar especial de nuestro corazón, ya que
+        inician una gran aventura con nosotros, su entrenador. Por eso hoy queremos mostraros la lista
+        con todos los Pokémon iniciales de todas las generaciones.
+    </p>
+    <br>
+    <p>
+        Un Pokémon inicial (starter Pokémon en inglés;<abbr title="Primer Pokémon en japonés">はじめてのポケモン</abbr>) es el
+        Pokémon con el que un
+        entrenador comienza su aventura.
+        Muchos entrenadores prefieren tener en su equipo dicho Pokémon porque con él establecen una importante relación
+        de amistad y confianza, o porque creen que es
+        el mejor Pokémon para su aventura.
+
+        En la mayoría de los videojuegos principales, al obtener un Pokémon inicial, este está en el nivel 5 y dispone
+        de dos movimientos: uno que causa daño al oponente
+        (placaje, arañazo o destructor) y otro de estado. Sin embargo, desde la sexta generación, los Pokémon iniciales
+        conocen un tercer movimiento del tipo al que pertenecen.
+        Por lo general los entrenadores pueden elegir entre un Pokémon de tipo planta, agua o fuego, estableciendo una
+        relación circular de ventajas y desventajas entre los tres
+        tipos. La mayoría de rivales siempre escogen el Pokémon de tipo ventajoso contra el del jugador.
+    </p>
+    <div class="back">
+        <p><img src="Imagenes/wallpaper-pokemon-25.png" alt="walpaperPokemon" id="imagenPrincipal" onmousemove="cambiarTamaño()" ondblclick="juegoMemoria()"></p>
+    </div>
+    <div class="ganadores">
+        <caption> Ultimos ganadores:</caption>
+        <table>
+            <tr>
+                <th>Año 2021 </th>
+                <th>Año 2022 </th>
+                <th>Año 2023 </th>
+                <th>Año 2024 </th>
+            </tr>
+            <tr>
+                <td>Bruno Melendez</td>
+                <td>DavidPokemaster</td>
+                <td>Terminator2<s>000</s></td>
+                <td><a href="#torneo">_________</a></td>
+            </tr>
+        </table>
+    </div>
+    <br>
+    <br>
+    <div>
+        <fieldset>
+            <legend id="fecha" onchange="timmerRecordatorio()"></legend>
+            <h2 id="reloj"></h2>
+        </fieldset>
+
+    </div>
+    <div class="insc" id="formulario">
+        <h3 id="torneo">Inscripción al torneo</h3>
+        <form id="form" action="url" method="get" onreset="borrar()"> 
+            <label for="EntradaNombre">Nombre:</label>
+            <input type="text" id="Nombre" name="Nombre" onkeypress="verificarConsulta()" required autofocus/>
+            <br>
+            <label id="ledad" for="edad">Indique su edad:</label>
+            <input type="number" id="edad" name="edad" min="12" max="100" onkeypress="verificaEdad()">
+            <br>
+            <input type="checkbox" name="notificacion" id="notificacion" checked="checked">
+            <label for="notificacion">Desea que se le notifique para futuros torneos:</label>
+            <br>
+            <br>
+            <label for="seleccion">Selecione sexo:</label>
+            <br>
+            <input id="rhombre" type="radio" name="sexo" value="h" />
+            <label for="rhombre">Hombre</label>
+            <input id="rmujer" type="radio" name="sexo" value="m" />
+            <label for="rmujer">Mujer</label>
+            <br>
+            <br>
+            <label for="pokemon" id="lPoke">Selecione pokemon:</label>
+            <br>
+            <select name="pokemon" id="pokemon" selected="Bulbasaur" onchange="probandoOnChange(this)">
+                <optgroup label="Iniciales de Kanto">
+                    <option value="Bulbasaur">Bulbasaur</option>
+                    <option value="Charmander">Charmander</option>
+                    <option value="quirtle">Squirtle</option>
+                </optgroup>
+                <optgroup label="Iniciales de Johto">
+                    <option value="Chikorita">Chikorita</option>
+                    <option value="Cyndaquil">Cyndaquil</option>
+                    <option value="Totodile">Totodile</option>
+                </optgroup>
+                <optgroup label="Iniciales de Hoenn">
+                    <option value="Treecko">Treecko</option>
+                    <option value="Torchic">Torchic</option>
+                    <option value="Mudkip">Mudkip</option>
+                </optgroup>
+                <optgroup label="Iniciales de Sinnoh">
+                    <option value="Turtwig">Turtwig</option>
+                    <option value="Chimchar">Chimchar</option>
+                    <option value="Piplup">Piplup</option>
+                </optgroup>
+                <optgroup label="Iniciales de Teselia">
+                    <option value="Snivy">Snivy</option>
+                    <option value="Tepig">Tepig</option>
+                    <option value="Oshawott">Oshawott</option>
+                </optgroup>
+                <optgroup label="Iniciales de Kalos">
+                    <option value="Chespin">Chespin</option>
+                    <option value="Fennekin">Fennekin</option>
+                    <option value="Froakie">Froakie</option>
+                </optgroup>
+                <optgroup label="Iniciales de Alola">
+                    <option value="Rowlet">Rowlet</option>
+                    <option value="Litten">Litten</option>
+                    <option value="Popplio">Popplio</option>
+                </optgroup>
+                <optgroup label="Iniciales de Galar">
+                    <option value="Grookey">Grookey</option>
+                    <option value="Scorbunny">Scorbunny</option>
+                    <option value="Sobble">Sobble</option>
+                </optgroup>
+                <optgroup label="Iniciales de Paldea">
+                    <option value="Sprigatito">Sprigatito</option>
+                    <option value="Fuecoco">Fuecoco</option>
+                    <option value="Quaxly">Quaxly</option>
+                </optgroup>
+            </select>
+            <br><br>
+            <label for="correo">Correo electronico</label>
+            <input type="email" name="email" id="mail"onblur="probandoOnBlur()" >
+            <br>
+            <br>
+            <label for="Descripcion">Información personal</label>
+            <br>
+            <textarea name="descrip" id="infpersonal" cols="20" rows="5" ondblclick="ampliarTamaño()" onselect="textoSeleccionado()"></textarea>
+            <br>
+            <input type="submit" name="enviar" value="Enviar datos" onmousedown="textoNotificacion()">
+            <input type="reset" value="Borrar datos">
+        </form>
+    </div>
+    <br>
+    <br>
+    <div class="acerca">
+        <h4>
+            <hr>Acerca de nosotros
+        </h4>
+        <a href="https://twitter.com/Pokemon_ES_ESP"><img src="Imagenes/twiter.png" alt="twitter"></a>
+        <a href="https://www.linkedin.com/company/pokemon/"><img src="Imagenes/indeed.png" alt="linked"></a>
+        <a href="https://www.instagram.com/PokemonESP/"><img src="Imagenes/insta.png" alt="inst"></a>
+        <a href="https://www.youtube.com/user/pokemonoficiales/"><img src="Imagenes/youtube.png" alt="yout"></a>
+    </div>
+    <div class="acerca2">
+        <a href="IndexWeb.html"><big>Inicio</big></a>
+        <br>
+        <br>
+        <a href="https://www.pokemon.com/es" target="_blank">Página oficial Pokemon</a>
+        <br>
+        <br>
+        <a href="mailto:pokemon@gmail.com">Contacto</a>
+        <p><small>
+                <hr>©2023 Pokémon. ©1995-2023 Nintendo / Creatures Inc. / GAME FREAK inc. TM, ®, and character names are
+                trademarks of Nintendo.
+            </small></p>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div id="bTema">
+        <button type="button" onclick="colorLetraAleatorio()">Color de letras aleatorio</button>
+   
+
+
+        
+    <!--Enlazando el JavaScript al documento HTML-->
+    <script src="paginaIndex.js"></script>
+    <script src="formulario.js"></script>
+    <script src="juego.js"></script>
+    <script src="eventosEspeciales.js"></script>
+</body>
+
+</html>

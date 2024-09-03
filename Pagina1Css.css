@@ -1,0 +1,33 @@
+body {
+    background-color: aquamarine;
+}
+
+img {
+    display: inline-block;
+    margin-left: 20px;
+    padding: 20px;
+    position: relative;
+    left: 400px;
+}
+
+img:hover {
+    transition: 2s;
+    transform: rotate(360deg);
+    width: 500px;
+    height: 500px;
+}
+
+dt {
+    font-size: large;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+}
+
+#opBotones {
+    padding: 10px 20px; /* Espacio interior para hacer el botón más grande */
+    font-size: 16px; /* Tamaño del texto */ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }

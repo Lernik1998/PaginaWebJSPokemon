@@ -1,0 +1,24 @@
+body {
+    background-color: aquamarine;
+}
+
+img {
+    display: inline-block;
+    margin-left: 20px;
+    padding: 20px;
+    position: relative;
+    left: 400px;
+}
+
+img:hover {
+    transition: 2s;
+    transform: rotate(360deg);
+    opacity: 0%;
+}
+
+dt {
+    font-size: large;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+}

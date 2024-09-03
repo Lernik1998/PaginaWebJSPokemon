@@ -1,0 +1,83 @@
+
+.premio,
+.acerca,
+.acerca2 {
+    text-align: center;
+}
+
+tr:hover {
+    background-color: #4682B4;
+}
+
+.premio{
+    margin: auto;
+}
+
+.ganadores
+ {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    margin: 0;
+    border-color: black;
+}
+
+.insc {
+    width: auto;
+    text-align: center;
+    border-width: 2px;
+    border-style: dashed;
+    border-color: #FF1493;
+    padding: 2%;
+    margin: 2%;
+}
+
+@media (min-width:0px) and (max-width:500px) {
+    body {
+        background-image: url(Imagenes/pokemon-ash.gif);
+    }
+
+    .menu,
+    .premio,
+    .ganadores,
+    .insc {
+        display: inline-block;
+    }
+
+    .back,
+    .acerca {
+        display: none;
+    }
+}
+
+@media (min-width:500px) and (max-width:1000px) {
+    .controdar {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        animation: arodar 2s linear infinite alternate;
+    }
+
+    @keyframes arodar {
+        from {
+            width: 100px;
+            background-color: pink;
+        }
+
+        to {
+            width: 800px;
+            background-color: red;
+        }
+    }
+
+}
+
+#bTema {
+    padding: 10px 20px; /* Espacio interior para hacer el botón más grande */
+    font-size: 16px; /* Tamaño del texto */ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
