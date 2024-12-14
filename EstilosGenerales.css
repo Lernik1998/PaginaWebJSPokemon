@@ -1,68 +1,85 @@
-git pull origin main
-git push origin mainh1,
-p,
-h2 {
-    text-align: center;
-}
-
-h1 {
-    border-bottom-width: 2px;
-    border-bottom-style: solid;
-    border-color: #00F;
+:root {
+    --pokemon-yellow: #FFCB05;
+    --pokemon-blue: #2A75BB;
+    --pokemon-red: #FF0000;
+    --background-color: #FFFFFF;
+    --text-color: #1B1B1B;
+    --accent-blue: #3D7DCA;
 }
 
 body {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background: linear-gradient(to top, pink, #F0FFFF);
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
 }
 
-input:hover,
-select:hover {
-    background-color: #D8BFD8;
+h1, p, h2 {
+    text-align: center;
+    color: var(--text-color);
+    margin: 1em 0;
 }
 
-input:focus,
-select:focus {
-    background-color: #E0FFFF;
+h1 {
+    font-size: 2.5em;
+    color: var(--pokemon-blue);
+    border-bottom: 4px solid var(--pokemon-yellow);
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
 }
 
 .menu {
     list-style: none;
-    padding: 0%;
-    background-color: #E0FFFF;
-    width: 90%;
-    max-width: 1000px;
-    margin: auto;
-    align-items: center;
+    background-color: var(--pokemon-blue);
+    padding: 1em;
+    margin: 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.menu li {
+    display: inline-block;
+    margin: 0 10px;
 }
 
 .menu li a {
     text-decoration: none;
-    color: black;
-    padding: 20px;
-    display: block;
-}
-.menu li {
+    color: white;
+    padding: 0.8em 1.5em;
+    border-radius: 4px;
+    font-weight: 500;
+    background-color: var(--accent-blue);
+    transition: all 0.3s ease;
     display: inline-block;
-    text-align: center;
 }
+
 .menu li a:hover {
-    background-color: #CD5C5C;
+    background-color: var(--pokemon-yellow);
+    color: var(--text-color);
 }
-@media (min-width:0px) and (max-width:500px) {
-    body {
-        background-image: url(Imagenes/pokemon-ash.gif);
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .menu li {
+        display: block;
+        margin: 10px 0;
     }
 
-    .menu,
-    .premio,
-    .ganadores,
-    .insc {
-        display: inline-block;
+    .menu li a {
+        display: block;
+        width: 80%;
+        margin: 0 auto;
     }
 
-    .back,
-    .acerca {
-        display: none;
+    h1 {
+        font-size: 2em;
     }
 }
